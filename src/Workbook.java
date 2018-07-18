@@ -13,7 +13,7 @@ public class Workbook extends Stationery {
         this.wbType = wbType;
     }
 
-    private String getType(WbType wbType) {
+    private String getWbType(WbType wbType) {
         switch (wbType) {
             case line:
                 return "в линейку";
@@ -26,6 +26,6 @@ public class Workbook extends Stationery {
     @Override
     public String toString() {
         return (stationery.getFullInfo() + ", количество страниц: " + pages
-                + ", тип: " + getType(wbType));
+                + ", тип: " + getWbType(wbType));
     }
 }

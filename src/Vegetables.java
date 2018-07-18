@@ -11,7 +11,7 @@ public class Vegetables extends Products {
         this.vegType = vegType;
     }
 
-    private String getName(VegType vegType) {
+    private String getVegType(VegType vegType) {
         switch (vegType) {
             case lettuce:
                 return "салат";
@@ -25,6 +25,6 @@ public class Vegetables extends Products {
 
     @Override
     public String toString() {
-        return (products.getFullInfo() + ", тип овощей: " + getName(vegType));
+        return (products.getFullInfo() + ", тип овощей: " + getVegType(vegType));
     }
 }
