@@ -9,11 +9,7 @@ public class Workbook extends Stationery {
 
     Workbook(String name, int cost, String barcode, String manufacturer, int pages, WbType wbType) {
         super(name, cost, barcode, manufacturer);
-        if (pages <= 0) {
-            throw new IllegalArgumentException("Количество странциц не может быть отрицательным " + getClass());
-        }
         this.pages = pages;
-
         this.wbType = wbType;
     }
 
@@ -25,10 +21,11 @@ public class Workbook extends Stationery {
         }
         return "в клетку";
     }
+    private Stationery stationery = new Stationery(name,cost,barcode,manufacturer);
 
     @Override
     public String toString() {
-        return ("Имя товара: " + name + ", цена: " + cost + ", штрих-код: " + barcode + ", производитель: " + manufacturer + ", количество страниц: " + pages
+        return (stationery.getFullInfo() + ", количество страниц: " + pages
                 + ", тип: " + getType(wbType));
     }
 }

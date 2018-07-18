@@ -46,10 +46,10 @@ public class Pencil extends Stationery {
         }
         return 3;
     }
+    private Stationery stationery = new Stationery(name,cost,barcode,manufacturer);
 
     @Override
     public String toString() {
-        return ("Имя товара: " + name + ", цена: " + cost + ", штрих-код: " + barcode + ", производитель: " + manufacturer
-                + ", цвет: " + getСolor(color) + ", толщина: " + getThickness(thickness));
+        return (stationery.getFullInfo() + ", цвет: " + getСolor(color) + ", толщина: " + getThickness(thickness));
     }
 }

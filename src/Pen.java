@@ -10,7 +10,6 @@ public class Pen extends Stationery {
     private Color color;
     private Thickness thickness;
 
-
     Pen(String name, int cost, String barcode, String manufacturer, Color color, Thickness thickness) {
 
         super(name, cost, barcode, manufacturer);
@@ -46,10 +45,10 @@ public class Pen extends Stationery {
         }
         return 3;
     }
+    private Stationery stationery = new Stationery(name,cost,barcode,manufacturer);
 
     @Override
     public String toString() {
-        return ("Имя товара: " + name + ", цена: " + cost + ", штрих-код: " + barcode + ", производитель: " + manufacturer
-                + ", цвет: " + getСolor(color) + ", толщина: " + getThickness(thickness));
+        return (stationery.getFullInfo() + ", цвет: " + getСolor(color) + ", толщина: " + getThickness(thickness));
     }
 }

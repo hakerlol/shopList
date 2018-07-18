@@ -12,7 +12,7 @@ public class Meat extends Products {
     }
 
 
-    private String getName(MeatType meatType) {
+    private String getMeatType(MeatType meatType) {
         switch (meatType) {
             case pork:
                 return "свинина";
@@ -22,10 +22,9 @@ public class Meat extends Products {
         }
         return "курица";
     }
-
+    private Products products = new Products(name,cost,barcode,manufactureDate,shelfLife);
     @Override
     public String toString() {
-        return ("Имя товара: " + name + ", цена: " + cost + ", штрих-код: " + barcode + ", дата изготовления: " + manufactureDate + ", срок годности: "
-                + shelfLife + " суток" + ", тип мяса: " + getName(meatType));
+        return (products.getFullInfo() + ", тип мяса: " + getMeatType(meatType));
     }
 }

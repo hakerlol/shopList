@@ -21,10 +21,10 @@ public class Vegetables extends Products {
 
         return "тыквыенные";
     }
+    private Products products = new Products(name,cost,barcode,manufactureDate,shelfLife);
 
     @Override
     public String toString() {
-        return ("Имя товара: " + name + ", цена: " + cost + ", штрих-код: " + barcode + ", дата изготовления: " + manufactureDate + ", срок годности: " + shelfLife
-                + " суток" + ", тип овощей: " + getName(vegType));
+        return (products.getFullInfo() + ", тип овощей: " + getName(vegType));
     }
 }

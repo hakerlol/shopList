@@ -3,16 +3,13 @@ public class Sweets extends Products {
 
     Sweets(String name, int cost, String barcode, String manufactureDate, int shelfLife, int cal) {
         super(name, cost, barcode, manufactureDate, shelfLife);
-        if (cal <= 0) {
-            throw new IllegalArgumentException("Калорийность не может быть отрицательным числом " + getClass());
-        } else {
-            this.cal = cal;
-        }
+        this.cal = cal;
+
     }
+    private Products products = new Products(name,cost,barcode,manufactureDate,shelfLife);
 
     @Override
     public String toString() {
-        return ("Имя товара: " + name + ", цена: " + cost + ", штрих-код: " + barcode + ", дата изготовления: " + manufactureDate
-                + ", срок годности: " + shelfLife + " суток" + ", каллории: " + cal);
+        return (products.getFullInfo() + ", каллории: " + cal);
     }
 }
