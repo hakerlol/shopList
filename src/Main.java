@@ -1,4 +1,3 @@
-import java.text.ParseException;
 import java.util.Random;
 
 public class Main {
@@ -13,7 +12,7 @@ public class Main {
     }
 
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
 
         Meat meat = new Meat("Вкусное мясо", 6, createBarcode(), "18.07.2018", 5, Meat.MeatType.pork);
         Vegetables vegetables = new Vegetables("Тыква", 6, createBarcode(), "25.03.2018", 30, Vegetables.VegType.pumpkin);

@@ -1,5 +1,5 @@
-public class Stationery extends Items {
-    String manufacturer;
+public abstract class Stationery extends Items {
+    private String manufacturer;
 
     Stationery(String name, int cost, String barcode, String manufacturer) {
         super(name, cost, barcode);

@@ -21,10 +21,10 @@ public class Vegetables extends Products {
 
         return "тыквыенные";
     }
-    private Products products = new Products(name,cost,barcode,manufactureDate,shelfLife);
+
 
     @Override
     public String toString() {
-        return (products.getFullInfo() + ", тип овощей: " + getVegType(vegType));
+        return (getFullInfo() + ", тип овощей: " + getVegType(vegType));
     }
 }

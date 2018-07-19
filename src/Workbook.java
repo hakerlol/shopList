@@ -21,11 +21,12 @@ public class Workbook extends Stationery {
         }
         return "в клетку";
     }
-    private Stationery stationery = new Stationery(name,cost,barcode,manufacturer);
+
 
     @Override
     public String toString() {
-        return (stationery.getFullInfo() + ", количество страниц: " + pages
+        return (getFullInfo() + ", количество страниц: " + pages
                 + ", тип: " + getWbType(wbType));
     }
 }
+

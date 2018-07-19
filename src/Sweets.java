@@ -6,10 +6,10 @@ public class Sweets extends Products {
         this.cal = cal;
 
     }
-    private Products products = new Products(name,cost,barcode,manufactureDate,shelfLife);
+
 
     @Override
     public String toString() {
-        return (products.getFullInfo() + ", каллории: " + cal);
+        return (getFullInfo() + ", каллории: " + cal);
     }
 }

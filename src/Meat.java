@@ -22,9 +22,9 @@ public class Meat extends Products {
         }
         return "курица";
     }
-    private Products products = new Products(name,cost,barcode,manufactureDate,shelfLife);
+
     @Override
     public String toString() {
-        return (products.getFullInfo() + ", тип мяса: " + getMeatType(meatType));
+        return (getFullInfo() + ", тип мяса: " + getMeatType(meatType));
     }
 }

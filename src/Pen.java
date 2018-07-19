@@ -45,10 +45,10 @@ public class Pen extends Stationery {
         }
         return 3;
     }
-    private Stationery stationery = new Stationery(name,cost,barcode,manufacturer);
+
 
     @Override
     public String toString() {
-        return (stationery.getFullInfo() + ", цвет: " + getСolor(color) + ", толщина: " + getThickness(thickness));
+        return (getFullInfo() + ", цвет: " + getСolor(color) + ", толщина: " + getThickness(thickness));
     }
 }

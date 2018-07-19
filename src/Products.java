@@ -1,6 +1,6 @@
-public class Products extends Items {
-    String manufactureDate;
-    int shelfLife;
+public abstract class Products extends Items {
+    private String manufactureDate;
+    private int shelfLife;
 
 
     Products(String name, int cost, String barcode, String manufactureDate, int shelfLife) {
